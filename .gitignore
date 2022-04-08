@@ -1,1 +1,4 @@
-*.sass /bin /admin /config
+*.sass
+/bin
+/admin
+/config
