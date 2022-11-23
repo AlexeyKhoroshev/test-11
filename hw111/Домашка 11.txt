@@ -1,0 +1,27 @@
+git init                                                              //подключаем git
+
+git config --global user.name 'Aleksey Khoroshev'                     //добавляем имя (глобально)    
+git config --global user.email 'leo_al@mail.ru'                       //добавляем email (глобально)
+
+echo *.sass > .gitignore                                              //создаем файл .gitignore куда прописываем исклбючение *.sass 
+echo /bin >> .gitignore                                               //дописываем в файл исключения для папки bin
+echo /admin  >> .gitignore                                            //дописываем в файл исключения для папки admin
+echo /config >> .gitignore                                            //дописываем в файл исключения для папки config
+
+git add .                                                             //индексируем фалы 
+git commit -m "добавлен файл gitignore"                               //делаем коммит 
+
+git branch mybranch                                                   //создаем ветку mybranch
+git checkout mybranch                                                 //переходим в ветку mybranch
+
+md blog                                                               //создаем папку blog
+cd blog                                                               //переходим в папку blog  
+nul > index.html                                                      //создаем файл index.html
+nul > index.js                                                        //создаем файл index.js   
+cd..                                                                  //возвращаемся обратно
+
+git add .                                                             //индексируем фалы в ветке
+git commit -m "коммит в mybranch"                                     //делаем коммит
+
+git remote add origin https://github.com/AlexeyKhoroshev/test-11.git  //подключаемся в удаленному репозиторию
+git push -u origin master                                             //выгружаем в удаленный репозиторий ветку master        
